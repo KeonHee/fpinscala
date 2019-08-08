@@ -78,5 +78,5 @@ object Option {
     case h :: t => f(h).flatMap(hh => traverse(t)(f).map(tt => hh :: tt))
   }
 
-  def sequence[A](a: List[Option[A]]): Option[List[A]] = traverse(a)(b => b)
+  def sequence1[A](a: List[Option[A]]): Option[List[A]] = traverse(a)(b => b)
 }
